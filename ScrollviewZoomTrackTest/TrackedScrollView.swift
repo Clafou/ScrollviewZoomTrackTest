@@ -15,14 +15,14 @@ class TrackedScrollView: UIScrollView {
     let square: UIView
     
     required init(coder aDecoder: NSCoder) {
-        square = UIView(frame: CGRect(x: 100, y: 300, width: 300, height: 300))
+        square = UIView(frame: CGRect(x: 50, y: 300, width: 300, height: 300))
         square.backgroundColor = UIColor.orangeColor()
 
         super.init(coder: aDecoder)
 
         self.addSubview(square)
-        self.maximumZoomScale = 10
-        self.minimumZoomScale = 0.1
+        self.maximumZoomScale = 1
+        self.minimumZoomScale = 0.5
         self.contentSize = CGSize(width: 500, height: 900)
         self.delegate = self
     }
