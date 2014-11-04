@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollviewZoomTrackTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGI-6p-e9t" customClass="TrackedScrollView" customModule="ScrollviewZoomTrackTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="overlaysView" destination="d0h-nK-ugp" id="1cX-dC-a0R"/>
+                                </connections>
+                            </scrollView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-nK-ugp" customClass="OverlaysView" customModule="ScrollviewZoomTrackTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="trackedScrollView" destination="jGI-6p-e9t" id="jXu-Tf-umB"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d0h-nK-ugp" firstAttribute="top" secondItem="jGI-6p-e9t" secondAttribute="top" id="148-kr-dAf"/>
+                            <constraint firstItem="jGI-6p-e9t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HVs-XR-oBg"/>
+                            <constraint firstItem="d0h-nK-ugp" firstAttribute="trailing" secondItem="jGI-6p-e9t" secondAttribute="trailing" id="Jb3-5n-Lha"/>
+                            <constraint firstItem="d0h-nK-ugp" firstAttribute="leading" secondItem="jGI-6p-e9t" secondAttribute="leading" id="M5X-AR-doi"/>
+                            <constraint firstItem="jGI-6p-e9t" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="cde-1g-rSp"/>
+                            <constraint firstItem="d0h-nK-ugp" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="dhR-LM-MYY"/>
+                            <constraint firstAttribute="trailing" secondItem="jGI-6p-e9t" secondAttribute="trailing" id="yXJ-Am-kmc"/>
+                            <constraint firstItem="jGI-6p-e9t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zBG-Cx-oim"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
